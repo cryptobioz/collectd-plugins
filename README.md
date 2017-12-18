@@ -38,3 +38,17 @@ You should provide an important *Interval* because the speedtest may take a whil
 You can set as *ServerID* as you want. If you do not provide this parameter, speedtest-cli will automatically use the best server.
 
 On reports, the *plugin_instance* is the remote host and the *type_instance* could be "ping", "download" or "upload".
+
+### Reboot required
+
+Returns 1 if a reboot is required.
+
+In `/etc/collectd/collectd.conf.d/reboot-required.conf`, write:
+
+```
+LoadPlugin python
+<Plugin python>
+  ModulePath "/opt/collectd-plugins"
+  Import "reboot-required"
+</Plugin>
+```
