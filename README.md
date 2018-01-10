@@ -52,3 +52,17 @@ LoadPlugin python
   Import "reboot-required"
 </Plugin>
 ```
+
+### KPTI enabled
+
+Returns 1 if KPTI is enabled.
+
+In `/etc/collectd/collectd.conf.d/kpti.conf`, write:
+
+```
+LoadPlugin python
+<Plugin python>
+  ModulePath "/opt/collectd-plugins"
+  Import "ktpi"
+</Plugin>
+```
