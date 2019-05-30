@@ -23,7 +23,7 @@ In `/etc/collectd/collectd.conf.d/speedtest.conf`, write:
 ```
 LoadPlugin python
 <Plugin python>
-  ModulePath "/opt/collectd-plugins"
+  ModulePath "/opt/collectd-plugins/speedtest"
   Import "speedtest"
   <Module speedtest>
     Interval 300
